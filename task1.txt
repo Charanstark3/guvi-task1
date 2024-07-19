@@ -1,0 +1,120 @@
+1.DIFFERENCE BETWEEN HTTP/1.1 vs HTTP/2:-
+
+HTTP (HYPERTEXT TRANSFER PROTOCOL):
+
+=> It is used in client-server communication.
+=> It is used to transfer information between networked devices and runs on top of other layers of the network protocol stack.
+
+HTTP/1.1: 
+
+=>HTTP/1.1 w as created in 1997.
+=>HTTP/1.1 works on the textual format.
+=>MULTIPLEXING: HTTP/1.1 loads resources one after other, so if one resource cannot be loaded, it blocks all the other resources behnd in it.
+=>SERVER PUSH: A server only serves content to a client device if the client asks for it. 
+=>HEADER COMPRESSION: It compresses data by itself.
+=>PRIORITIZATION: It doesn't have a mechanisms for prioritize.
+
+HTTP/2:
+
+=>HTTP/2 which was created by 2015.
+=>HTTP/2 is mch faster version and more efficient than HTTP/1.1
+=>MULTIPLEXING: HTTP/2 is able to use a TCP connecion to send multiple streams of data at once so that no one resources blocks any other resources.
+=>SERVER PUSH: HTTP/2 solves this issue by allowing a server to 'push' content to a client to a client before the client asks for it.
+=>HEADER COMPRESSION: HTTP/2 uses a a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets. 
+=>PRIORITIZATION: HTTP/2 offers a feature called weighted prioritization. This allows developers to decide which page resources will load first, every time.
+
+
+
+2. BLOG ABOUT OBJECTS AND IT'S INTERNAL REPRESENTATIONOF JAVASCRIPT:
+
+OBJECTS:
+
+=>Objects are important data types in javascript. 
+=>Objects are different than primitive datatypes (i.e. number, string, boolean, etc.).
+=>Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types.
+=>An object, is a reference data type.
+
+OBJECTS AND PROPERTIES: 
+
+=>A JavaScript object has properties associated with it. A property of an object can be explained as a variable that is attached to the object.
+=>Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects.
+
+=> You access the properties of an object with a simple dot-notation:
+
+           objectName.propertyName
+
+
+CREATE JAVASCRIPT OBJECT WITH OBJECT LITERAL:
+
+=>One of easiest way to create a javascript object is object literal, simply define the property and values inside curly braces as shown below
+
+         let bike = {name: 'SuperSport', maker:'BMW s1000rr', engine:'999cc'};
+
+
+UNDERSTANDING OBJECTS IN JAVASCRIPT:
+
+=>In JavaScript, objects are collections of key-value pairs, where keys are strings (or symbols) and values can be of any data type, including other objects. Objects are used to represent real-world entities, data structures, and more complex data types.
+
+            const person = {
+             name: "Sreeram K",
+             age: 22,
+            email: "sreeramuidesigner@gmail.com"
+};
+
+INTERNAL REPRESENTATIONS OF OBJECTS:
+
+=>Internally, JavaScript engines use various data structures to represent objects efficiently. One common approach is using a hash table or a similar structure to store the object’s properties and their corresponding values. This allows for fast access and manipulation of properties.
+
+Internal Representation:
+{
+  name: "Sreeram K",
+  age: 22,
+  email: "sreeramuidesigner@gmail.com"
+}
+
+
+
+3.BLOG ABOUT IP ADDRESS, PORT, HTTP METHODS MAC ADDRESS:-
+
+IP ADDRESS: 
+
+=>An IP address is a unique numerical label assigned to each device connected to a computer network, such as the internet. It acts as a virtual address that allows devices to communicate and identify each other on the network. There are two main versions of IP addresses:
+=>IPv4: The older version, consisting of four sets of numbers between 0 and 255, separated by periods (e.g., 192.168.1.1).
+=>IPv6: The newer version, with a more complex format using hexadecimal numbers and colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+PORT:
+
+=>A port is a virtual communication channel associated with an IP address. 
+=>It allows different applications or services running on the same device to receive and send data independently. 
+=>Imagine an IP address as a building with multiple doors (ports), each leading to a specific apartment (application or service). 
+=>Common port numbers include:
+   80: HTTP (web traffic)
+   443: HTTPS (secure HTTP)
+   21: FTP (file transfer)
+   25: SMTP (email)
+
+HTTP METHODS:
+
+=>HTTP methods are specific commands sent within an HTTP request to instruct the server on how to handle the request. 
+=>These methods define the desired action on the server-side, such as retrieving data, creating new resources, or updating existing ones. 
+=>Some common HTTP methods include:
+
+      GET: Retrieves data from the server, often used for fetching web pages or resources.
+      POST: Submits data to the server, typically used for submitting forms or creating new data.
+      PUT: Updates existing data on the server.
+      DELETE: Removes data from the server.
+      PATCH: Applies partial modifications to data on the server.
+
+MAC ADDRESS:
+
+=>A MAC address (Media Access Control address) is a unique hardware identifier assigned to each network interface card (NIC) in a device.
+=> It’s used at the data link layer of the OSI model to ensure proper delivery of data frames within a local network segment. Unlike IP addresses, which can be dynamic and change, MAC addresses are typically burned into the hardware and remain static.
+
+RELATIONSHIPS BETWEEN THESE CONCEPTS:
+
+IP address and port: 
+=>Together, they uniquely identify a specific application or service running on a device on the network.
+IP address and MAC address: 
+=>An IP address is assigned to a logical network interface, while a MAC address is assigned to the physical NIC hardware. A device can have multiple MAC addresses but only one primary IP address for each network interface.
+HTTP methods and ports: 
+=>Specific HTTP methods are often associated with specific ports. For example, GET and POST requests for web pages typically use port 80 (HTTP) or 443 (HTTPS).
